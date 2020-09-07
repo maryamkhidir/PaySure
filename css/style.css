@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Titillium-R';
+    src: local('Titillium-R'), url(../fonts/TitilliumWeb-Regular.ttf) format('truetype');
+  }
+@font-face {
+    font-family: 'Merriweather';
+    src: local('Merriweather'), url(../fonts/Merriweather-Regular.ttf) format('truetype');  
+}
+@font-face {
+  font-family: 'Merriweather-Bold';
+  src: local('Merriweather-Bold'), url(../fonts/Merriweather-Bold.ttf) format('truetype');  
+}
+@font-face {
+  font-family: 'Merriweather-Italic';
+  src: local('Merriweather-Italic'), url(../fonts/Merriweather-Italic.ttf) format('truetype');  
+}
+@font-face {
+  font-family: 'Titillium';
+  src: local('Titillium'), url(../fonts/TitilliumWeb-Light.ttf) format('truetype');  
+}
+@font-face {
+font-family: 'Titillium-Bold';
+src: local('Titillium-Bold'), url(../fonts/TitilliumWeb-Bold.ttf) format('truetype');
+}
+  
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Titillium';
+  color: #242131;
+  margin: 0;
+}
+
+header{
+  display: flex; height: 74px; padding-left: 100px; padding-right: 100px; justify-content: space-between; align-items: center;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.menu .icon{
+  display: none;
+}
+
+.menu > span{
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-list > div{
+  display: flex; flex-direction: column;
+}
+
+.footer-list > div > span{
+  margin-bottom: 9px;
+}
+
+.menu > span > span {
+  padding-left: 10px;
+}
+
+::placeholder{
+  color: #071A2D;
+  font-size: 20px;
+  font-family: Titillium;
+}
+
+.slider{
+  color: #FFF;
+  background-image: url('/images/bg_img.png');
+  background-size: cover;
+  display: flex;
+}
+
+.slider-font{
+  font-size: 96px; letter-spacing: -0.01em; margin-bottom: 43px; line-height: 103px;
+}
+
+.half{
+  width: 48%;
+}
+.tab{
+  width: 724px; 
+}
+.tab .accordion{
+  display: none;
+}
+.tab.open .accordion{
+  display: block;
+}
+.row{
+  display: flex;
+}
+.form-control{
+  width: 50%;
+  padding: 10px 15px;
+}
+.three-fifth{
+  width: calc(3/5 * 100%);
+}
+.container{
+  padding: 60px 100px; 
+}
+.two-fifth{
+  width: calc(2/5 * 100%);
+}
+.slider2{
+  background-image: url('/images/bg2.png');
+  background-size: cover;
+}
+
+.button{
+  display: flex; align-items: center; color: #FFF; padding: 11px 15px; border-radius: 7px;
+}
+
+.billboard{
+  padding: 100px 100px 60px ;
+  display: flex;
+  justify-content: space-between;
+}
+.team > div{
+  margin-bottom: 60px;
+}
+.billbaby{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.list div{
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.buttons > div{
+  margin-right: 20px;
+}
+.title{
+  font-size: 48px; 
+}
+
+@media only screen and (max-width: 768px) {
+  /* For pads: */
+  body{
+    width: 100%;
+  }
+  .tab{
+    width: 100%; 
+  }
+  header{
+    padding-left: 60px; padding-right: 60px;
+  }
+
+  .imagepro{
+    padding-left: 60px; padding-right: 60px;
+  }
+  .container{
+    padding: 60px
+  }
+  .billboard{
+    flex-direction: column;
+    padding: 60px ;
+  }
+  .billbaby{
+    flex-direction: column;
+  }
+
+  .three-fifth{
+    width: 100%;
+  }
+
+  .half{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .none{
+    display: none;
+  }
+
+  .title{
+    font-size: 40px; 
+  }
+
+  .menu span, .menu div {
+    display: none;
+  }
+
+  .menu .icon{
+    display: block;
+  }
+  /* .menu{
+    display: block;
+  }
+  .menu.responsive{
+    position: absolute;
+    background-color: #FFF;
+    padding: 30px 20px;
+  }
+  .menu.responsive span{
+    display: flex;
+    float: none;
+    text-align: left;
+  }
+  .menu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+
+  .content{
+    max-width: 100%;
+  }
+  .logo{
+    height: 28px;
+  }
+  .campaign-img img{
+    height: 180px;
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+  /*For smart phones*/
+  header{
+    padding-left: 40px; padding-right: 40px;
+  }
+  .tab{
+    width: 100%; 
+  }
+  .imagepro{
+    padding-left: 0; padding-right: 0;
+  }
+  .container{
+    padding: 40px
+  }
+  .billboard{
+    padding: 40px ;
+  }
+  .slider-font{
+    font-size: 80px; line-height: 93px;
+  }
+  .center{
+    text-align: center;
+  }
+  .footer-head{
+    flex-direction: column;
+  }
+  .buttons{
+    align-items: center;
+    flex-direction: column;
+  }
+  .buttons > div{
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  .footer-list > div {
+    width: 100%;
+  }
+}
