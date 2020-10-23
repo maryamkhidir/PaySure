@@ -1,26 +1,19 @@
 @font-face {
-    font-family: 'Titillium-R';
-    src: local('Titillium-R'), url(../fonts/TitilliumWeb-Regular.ttf) format('truetype');
+    font-family: 'Sora-Bold';
+    src: local('Sold-Bold'), url(../fonts/Sora-Bold.ttf) format('truetype');
   }
+
 @font-face {
-    font-family: 'Merriweather';
-    src: local('Merriweather'), url(../fonts/Merriweather-Regular.ttf) format('truetype');  
+  font-family: 'Sora';
+  src: local('Sora'), url(../fonts/Sora-Light.ttf) format('truetype');  
 }
 @font-face {
-  font-family: 'Merriweather-Bold';
-  src: local('Merriweather-Bold'), url(../fonts/Merriweather-Bold.ttf) format('truetype');  
+  font-family: 'Sora-R';
+  src: local('Sora-R'), url(../fonts/Sora-Regular.ttf) format('truetype');  
 }
 @font-face {
-  font-family: 'Merriweather-Italic';
-  src: local('Merriweather-Italic'), url(../fonts/Merriweather-Italic.ttf) format('truetype');  
-}
-@font-face {
-  font-family: 'Titillium';
-  src: local('Titillium'), url(../fonts/TitilliumWeb-Light.ttf) format('truetype');  
-}
-@font-face {
-font-family: 'Titillium-Bold';
-src: local('Titillium-Bold'), url(../fonts/TitilliumWeb-Bold.ttf) format('truetype');
+font-family: 'Sora-SB';
+src: local('Sora-SM'), url(../fonts/Sora-SemiBold.ttf) format('truetype');
 }
   
 * {
@@ -28,13 +21,14 @@ src: local('Titillium-Bold'), url(../fonts/TitilliumWeb-Bold.ttf) format('truety
 }
 
 body{
-  font-family: 'Titillium';
-  color: #242131;
+  font-family: 'Sora';
+  color: #181830;
+  font-weight: 600;
   margin: 0;
 }
 
 header{
-  display: flex; height: 74px; padding-left: 100px; padding-right: 100px; justify-content: space-between; align-items: center;
+  display: flex; height: 74px; padding-left: 70px; padding-right: 70px; justify-content: space-between; align-items: center;
 }
 
 .menu{
@@ -49,18 +43,22 @@ header{
 }
 
 .menu > span{
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
   display: flex;
   justify-content: center;
 }
 
 .footer-list > div{
   display: flex; flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .footer-list > div > span{
-  margin-bottom: 9px;
+  margin-bottom: 19px;
+  font-size: 20px;
+  color: #556575;
 }
 
 .menu > span > span {
@@ -74,14 +72,16 @@ header{
 }
 
 .slider{
-  color: #FFF;
-  background-image: url('/images/bg_img.png');
-  background-size: cover;
+  background-image: url('/images/homebg.png');
+  background-size: contain;
+  background-color: #FCFBFF;
+  background-repeat: no-repeat;
+  background-position: right top;
   display: flex;
 }
 
 .slider-font{
-  font-size: 96px; letter-spacing: -0.01em; margin-bottom: 43px; line-height: 103px;
+  font-size: 64px; margin-bottom: 32px; line-height: 66px; font-weight: 600; font-family: Sora-R;
 }
 
 .half{
@@ -104,10 +104,11 @@ header{
   padding: 10px 15px;
 }
 .three-fifth{
-  width: calc(3/5 * 100%);
+  width: calc(2/3 * 100%);
+  max-width: 780px;
 }
 .container{
-  padding: 60px 100px; 
+  padding: 60px 70px; 
 }
 .two-fifth{
   width: calc(2/5 * 100%);
@@ -122,7 +123,7 @@ header{
 }
 
 .billboard{
-  padding: 100px 100px 60px ;
+  padding: 100px 70px 100px ;
   display: flex;
   justify-content: space-between;
 }
@@ -136,14 +137,38 @@ header{
 }
 .list div{
   width: 50%;
+  display: flex;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.list2 div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.list3 div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .buttons > div{
   margin-right: 20px;
 }
 .title{
   font-size: 48px; 
+}
+.addbg{
+  background-image: url('/images/phonebg.png');
+}
+.iconbg{
+  background-image: url('/images/Integration.png');
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,7 +197,7 @@ header{
     flex-direction: column;
   }
 
-  .three-fifth{
+  .three-fifth, .two-fifth{
     width: 100%;
   }
 
@@ -224,6 +249,10 @@ header{
   .campaign-img img{
     height: 180px;
   }
+  .footer-list > div {
+    flex: 1;
+    margin-top: 30px;
+  }
 
 }
 
@@ -244,8 +273,17 @@ header{
   .billboard{
     padding: 40px ;
   }
+  .addbg{
+    background-image: unset;
+  }
+  .iconbg{
+    background-image: unset;
+  }
+  .slider{
+    background-image: unset;
+  }
   .slider-font{
-    font-size: 80px; line-height: 93px;
+    font-size: 60px; line-height: 66px;
   }
   .center{
     text-align: center;
@@ -261,8 +299,5 @@ header{
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 15px;
-  }
-  .footer-list > div {
-    width: 100%;
   }
 }
