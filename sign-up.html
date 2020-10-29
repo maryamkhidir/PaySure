@@ -3,123 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PayPhast|Sign up</title>
+    <title>PaySure|Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="/css/fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        ::placeholder{
-            color: #161C2D;
-            opacity: 0.7;
-            font-size: 15px;
-        }
-        .container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 12px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        }
-
-        /* Hide the browser's default checkbox */
-        .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-        }
-
-        /* Create a custom checkbox */
-        .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 19px;
-        width: 19px;
-        border-radius: 3px;
-        background-color: #E7E9ED;
-        }
-
-        /* On mouse-over, add a grey background color */
-        .container:hover input ~ .checkmark {
-        background-color: #ccc;
-        }
-
-        /* When the checkbox is checked, add a blue background */
-        .container input:checked ~ .checkmark {
-        background-color: #6D4AFF;
-        }
-
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-        }
-
-        /* Show the checkmark when checked */
-        .container input:checked ~ .checkmark:after {
-        display: block;
-        }
-
-        /* Style the checkmark/indicator */
-        .container .checkmark:after {
-        left: 7px;
-        top: 4px;
-        width: 3px;
-        height: 7px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        }
-    </style>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div style="align-items: center; display: flex; "><img src="images/logo.png" style="width: 34px; height: 34px;" alt=""><span style="font-size: 35px; font-weight: 900; margin-left: 13px; font-family: Titillium-Bold;">PayPhast</span></div>
+        <div style="align-items: center; display: flex; "><img src="images/logo.png" style="width: 121.5px; height: 36px;" alt=""></div>
         <div id="menu" class="menu">
-            <span>Services <span><i class="fa fa-angle-down"></i></span></span>
-            <span>Company <span><i class="fa fa-angle-down"></i></span></span>
-            <span>Contact</span>
-            <span>FAQ</span>
-            <span style="color: #6D4AFF;">Login</span>
-            <span class="button" style="background-color: #362773;white-space: nowrap;">
-                <img src="images/logo_w.png" style="width:21px; height:21px" alt="">
-                <span style="margin-left: 10px;">Sign up</span>
-            </span>
+            <span>Our Products  <span><svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.02856 1L7.1244 6.53846L13.2202 1" stroke="#556575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span></span>
+            <span>Company <span><svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.02856 1L7.1244 6.53846L13.2202 1" stroke="#556575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span></span>
+            <span>Resources <span><svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.02856 1L7.1244 6.53846L13.2202 1" stroke="#556575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span></span>
+            <span>Developers <span><svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.02856 1L7.1244 6.53846L13.2202 1" stroke="#556575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span></span>
+            <span>Login</span>
+            <span class="button" style="background-color: #5323D7;white-space: nowrap; font-weight: 700; font-family: Sora-SB;">Create Account</span>
             <span class="icon" onclick="toggleMenu()"><i class="fa fa-bars" style="font-size: 24px;"></i></span>
         </div>
     </header>
-    <div class="billboard" style="display: flex; align-items: center; flex-direction: column; background-color: #F4F7FA;">
-        <div style="font-size: 48px; font-family: Titillium-Bold; margin-bottom: 11px; color: #242131; text-align: center; line-height: 65px;">Sign up to PayPhast</div>
-        <div style="color: #161C2D; opacity: 0.7; font-size: 19px; text-align: center; line-height: 32px; letter-spacing: -0.2px;">
-            To get started, you need to sign in here.
-        </div>
-        <div style="margin-top: 39px; margin-bottom: 19px; background-color: #FFF; padding: 25px; border-radius: 10px; border: 1px solid #E7E9ED; box-shadow: 0px 34px 33px -23px rgba(22, 28, 45, 0.129453);">
-            <label for="Name" style="font-family: Titillium-Bold; font-size: 15px; display: block; margin-bottom: 7px;">Full name</label>
-            <input type="text" style="color: #071A2D; border: 1px solid #E7E9ED; width: 299px; height: 50px; margin-bottom: 21px; border-radius: 8px; padding: 12px 18px;" placeholder="i.e. Usman Abiola">
-            <label for="Email" style="font-family: Titillium-Bold; font-size: 15px; display: block; margin-bottom: 7px;">Email Address</label>
-            <input type="email" style="color: #071A2D; border: 1px solid #E7E9ED; width: 299px; height: 50px; margin-bottom: 21px; border-radius: 8px; padding: 12px 18px;" placeholder="i.e. john@mail.com">
-            <label for="Password" style="font-family: Titillium-Bold; font-size: 15px; display: block; margin-bottom: 7px;">Password</label>           <input type="text" style="color: #071A2D; border: 1px solid #E7E9ED; width: 299px; height: 50px; margin-bottom: 19px; display: block; border-radius: 8px; padding: 12px 18px;" placeholder="********">
-            <label class="container">I agree to the Terms & conditions
-                <input type="checkbox" checked>
-                <span class="checkmark"></span>
-            </label>
-            <div style="display: flex; justify-content: center; background-color: #6D4AFF; width: 300px; color: #FFF; padding: 11px 24px; border-radius: 8px;">
-                <span style="font-size: 18px; font-weight: bold">Create Account</span>
+    <div class="billboard" style="padding: 50px 70px 100px; display: block; background-color: #F8F8FB;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <div class="three-fifth" style="margin-bottom: 19px; background-color: #FFF;  border-radius: 10px; box-shadow: 0px 15px 30px rgba(54, 61, 77, 0.03);">
+            <div style="padding: 49px 44px 22px; display: flex;"> 
+              <img src="images/signicon.png" alt="" style="width: 64px; height: 64px;">
+              <div style="margin-left: 38px;">
+                  <div style="font-size: 24px; font-family: Sora-R; line-height: 36px;">Sign up to PaySure</div>
+                  <div style="color: #556575; font-size: 16px;">Reliable Digital Payment platform, tailored for you.</div>
+              </div>
+            </div>
+            <div style="background: #E6ECF1; height: 1px; width: calc(100%-88px); margin:0 44px"></div>
+            <div style="padding: 45px 44px 70px;">
+              <div class="row">
+                <div class="col col-6">
+                  <div style="display: flex; justify-content: space-between;">
+                    <label for="Full name" style="font-size: 11px; display: block;  text-transform: uppercase; margin-bottom: 16px; font-family: Sora-R; color: #556575; font-weight: bold;">Full name
+                    </label>
+                    <span style="font-size: 12px; margin-bottom: 16px; color: #5565755A;">Required</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Usman Abiola">
+                </div>
+                <div class="col col-6">
+                    <div style="display: flex; justify-content: space-between;">
+                        <label for="Email address" style="font-size: 11px; display: block;  text-transform: uppercase; margin-bottom: 16px; font-family: Sora-R; color: #556575; font-weight: bold;">Email address</label>
+                        <span style="font-size: 12px; margin-bottom: 16px; color: #5565755A;">Required</span>
+                    </div>
+                  <input type="email" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-6">
+                    <div style="display: flex; justify-content: space-between;">
+                      <label for="Mobile Number" style="font-size: 11px; display: block;  text-transform: uppercase; margin-bottom: 16px; font-family: Sora-R; color: #556575; font-weight: bold;">Phone Number
+                      </label>
+                      <span style="font-size: 12px; margin-bottom: 16px; color: #5565755A;">Required</span>
+                    </div>
+                    <div class="input-group ml-0" style="flex-direction: row;">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" style="background-color:transparent" id="basic-addon1">+234</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="00-000-0000">
+                    </div>
+                </div>
+                <div class="col col-6">
+                  <label for="Email address" style="font-size: 11px; display: block;  text-transform: uppercase; margin-bottom: 16px; font-family: Sora-R; color: #556575; font-weight: bold;">Create Password</label>
+                  <div class="input-group ml-0" style="flex-direction: row;">
+                    <input type="email" class="form-control" placeholder="***********"  style="border-right: unset;">
+                    <div class="input-group-append">
+                        <span class="input-group-text" style="background-color:transparent;" id="basic-addon2">
+                        <img src="images/eyeicon.png" style="width:14px; height:14px" alt="">
+                        </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 40px;">
+                <div style="display: flex; justify-content: center; background-color: #5323D7; color: #FFF; padding: 11px 24px; border-radius: 6px; margin-bottom: 3px; width: 100%;">
+                    <span style="font-size: 16px; font-family: Sora-SB; font-weight: 700">Create account <span style="font-family: Sora;">- It’s free </span></span>
+                </div>
+                <div style="display: flex; justify-content: center;padding: 11px 24px; border-radius: 6px; margin-bottom: 3px;  width: 100%;">
+                  <span style="font-size: 14px;">Got an account ? <span style="color: #5323D7; font-family: Sora-SB;"> Sign in </span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="one-third" style="margin-bottom: 19px; background-color: #FFF;  border-radius: 10px; box-shadow: 0px 15px 30px rgba(54, 61, 77, 0.03);">
+            <div style="display: flex; flex-direction: column; padding: 34px 0;"> 
+                <img src="images/signbg.png"  style="width: 100%;" alt="">
+                <div style="padding: 0 34px; text-align:center; margin-top:-185px ">
+                    <div style="font-family: Ricoleta-SB; margin-bottom: 24px; font-size: 28px; line-height: 35px; font-weight: 700;">Making payments has never been <span style="font-size: 34px; color: #00C880;">easier</span></div>
+                    <div style="color: #556575; font-size: 16px; line-height: 24px; font-weight: 400;">PaySure is a payment platform for Easy Airtime Recharge, Funds Transferand Bill Payments</div>
+                </div>
             </div>
         </div>
-        <div style="color: #161C2D; font-size: 16px; margin-bottom: 29px; line-height: 32px;">
-            Already have an account? <span style="font-family: Titillium-R; font-weight: 900; color: #473BF0;">Sign in now</span> 
+      </div>
+
+    </div>
+    <div class="billboard" style="padding-top: 0; padding-bottom: 0; background-color: #5323D7; background-image: url('images/Components.png');; background-size: contain; background-repeat: no-repeat; background-position: right;">
+      <div style="display:flex; font-size: 48px; line-height: 56px; max-width: 555px; color: #FFF; font-family:'Sora-SB'; align-items: center;">Download Paysure App on your mobile</div>
+      <div style="display: flex; flex-wrap: wrap; flex: 1; justify-content: space-between;">
+        <img src="images/mobilemockup.png" style="width:168px; margin-top: 30px; " alt="">
+        <div style="display: flex; align-items: center; flex-wrap: wrap;">
+          <img src="images/playstore.png" style="height: 60px;
+          margin-right: 14px;" alt="">
+          <img src="images/applestore.png" style="height: 60px;" alt="">
         </div>
+      </div>
+    </div>
+    <div class="billboard" style="padding-top: 80px; padding-bottom: 80px; flex-direction: column;">
+        <div>
+            <div class="footer-head" style="margin-bottom: 80px; display: flex;">
+                <div class="two-fifth">
+                    <div style="display: flex; align-items: center; margin-bottom: 19px;">
+                        <img src="images/logo.png" style="height:54px" alt="">
+                    </div>
+                    <div style="font-size: 20px; color: #858A8F; line-height: 30px;">
+                        6 Sani Daura Close Off Wole Soyinka Avenue, Gwarimpa Abuja
+                    </div>
+                    <div style="font-size: 20px; color: #7F56F0; margin-top: 18px; line-height: 30px;">
+                        Contact@paysuredigital.com
+                    </div>
+                    <div style="display: flex; margin: 20px 0;">
+                        <img src="images/Facebook.png" style="width:54px; margin-right: 13px;" alt="">
+                        <img src="images/Twitter.png" style="width:54px;  margin-left: 13px;" alt="">
+                    </div>
+                </div>
+                <div class="footer-list" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <div>
+                        <span style="font-family: Sora-SB; font-weight: 600; color: #333333; font-size: 24px; margin-bottom: 29px;">Products</span>
+                        <span>PaySure App</span>
+                        <span>PaySure Web</span>
+                        <span>Agency Banking</span>
+                    </div>
+                    <div>
+                        <span style="font-family: Sora-SB; font-weight: 600; color: #333333; font-size: 24px; margin-bottom: 29px;">Company</span>
+                        <span>About Us</span>
+                        <span>Compliance</span>
+                        <span>Customers</span>
+                        <span>Contact us</span>
+                    </div>
+                    <div>
+                        <span style="font-family: Sora-SB; font-weight: 600; color: #333333; font-size: 24px; margin-bottom: 29px;">Resources</span>
+                        <span>FAQ</span>
+                        <span>Blog</span>
+                        <span>Documentation</span>
+                    </div>
+                    <div>
+                        <span style="font-family: Sora-SB; font-weight: 600; color: #333333; font-size: 24px; margin-bottom: 29px;">Developers</span>
+                        <span>Sandbox</span>
+                        <span>Test Account</span>
+                        <span>Status Page</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-head" style="font-size: 16px; color: #898A8E; margin-top: 35px;">
+                © 2020 PaySure Digital Technologies
+            </div>
+        </div>
+        
     </div>
     <script defer src="/css/fontawesome/js/all.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
