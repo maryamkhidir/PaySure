@@ -91,7 +91,6 @@ header{
 }
 
 .slider{
-  background-size: contain;
   background-color: #FCFBFF;
   display: flex;
   background-image: url('/images/world.png');
@@ -100,12 +99,42 @@ header{
   background-position: right;
 }
 
+.slider3{
+  display: flex;
+  background-repeat: no-repeat;
+  background-color:#F7F7FF;
+  justify-content: center; 
+  text-align: center; 
+  background-image: url('/images/compliance.png'); 
+  background-position:  center bottom;
+  background-size: contain;
+  padding-bottom: 250px;
+}
+
+.banner{
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5323D7; background-image: url('/images/Components.png'); background-size: contain; background-repeat: no-repeat; background-position: right;
+}
+
 .slider-font{
   font-size: 64px; margin-bottom: 32px; line-height: 66px; font-weight: 600; font-family: Sora-R;
+}
+.nav-tabs{
+  overflow-x: auto;
+   overflow-y:hidden;
+   flex-wrap: nowrap;
 }
 
 .nav-tabs .nav-link.active{
   border-color: unset;
+  background-color: #FFF; color: #5323D7; font-family: Sora-SB ;
+
+}
+.faq-tabs .nav-link.active{
+  border-bottom: 1px solid;
+  border-radius: unset;
   background-color: #FFF; color: #5323D7; font-family: Sora-SB ;
 
 }
@@ -116,32 +145,66 @@ header{
   display: none;
 }
 .nav-tabs .nav-link {
+  white-space: nowrap;
   border:unset;
   background-color: transparent; 
   color: #556575;
+}
+.faq-tabs .nav-link {
+  border:unset;
+  font-size: 16px;
+  margin: auto 15px;
+  padding: 34px 25px 23px;
+  background-color: transparent; 
+  color: #AAB2BA;
+}
+
+.tab.open label{
+  color: #5323D7;
+  font-family: Sora-R;
+  font-weight: 600;
+}
+.tab label{
+  font-size: 20px; display: block;  margin-bottom: 0; font-weight: normal;
+}
+
+.tab span{
+  font-size: 14px;
+  color: #183B56;
 }
 
 .half{
   width: 48%;
 }
 .tab{
-  width: 724px; 
+  width: 960px; margin-bottom: 20px; background-color: #FFF; padding: 25px; border-radius: 8px; border: 1px solid #E5EAF4; box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03);
 }
 .tab .accordion{
   display: none;
+  color: #75818D; margin-top: 23px; font-size: 18px; line-height: 32px; font-weight: normal;
 }
 .tab.open .accordion{
   display: block;
 }
+.tab.open .fa-plus{
+  display: none;
+}
+.tab.open .fa-minus{
+  display: block;
+}
+.tab .fa-minus{
+  display: none;
+}
+
 .row{
   display: flex;
   margin-right: -30px;
   margin-left: -30px;
-  margin-bottom: 32px;
 }
 .col{
   padding-right: 30px;
   padding-left: 30px;
+  margin-bottom: 32px;
 }
 .form-control{
   /* padding: 10px 15px; */
@@ -219,16 +282,37 @@ header{
 .addbg{
   background-image: url('/images/phonebg.png');
 }
+.agencybg{
+  background-image: url('/images/PABbg.png');
+}
 .iconbg{
   background-image: url('/images/Integration.png');
 }
 
 .card{
-  display: flex; border: 1.1px solid #E5EAF4; box-shadow: 0px 16.5px 38.5px rgba(0, 0, 0, 0.05); max-width:512px; height: 178px; background-color: #FFF; justify-content: space-between; border-radius: 18px; padding: 35px; margin: 9px;
+  display: flex; flex-wrap: wrap; border: 1.1px solid #E5EAF4; box-shadow: 0px 16.5px 38.5px rgba(0, 0, 0, 0.05); max-width:512px; min-height: 178px; background-color: #FFF; justify-content: space-between; border-radius: 18px; padding: 35px; margin: 9px;
+}
+
+.agencycard{
+  display: flex; flex-direction: column;  max-width:512px; min-height: 470px; background-color: #FFF; border-radius: 10px; padding: 50px 30px 50px 50px; margin: 20px;box-shadow: 0px 20px 45px rgba(209, 217, 225, 0.35);
+
+}
+
+.aboutcard{
+  display: flex; flex-direction: column;  min-height: 354px; background-color: #FFF; border-radius: 10px; padding: 50px 30px 50px 50px; margin: 20px; box-shadow: 0px 60px 40px rgba(209, 217, 225, 0.19); width: calc(50% - 40px);
+}
+
+.faqcard{
+  display: flex; flex-direction: column; border: 1px solid #E5EAF4; box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03); border-radius: 8px; max-width:465px; min-height: 202px; background-color: #FFF; align-items: center; padding: 35px 80px; margin: 15px; text-align: center;
 }
 
 .benefits{
-  display: flex; flex:1; flex-direction: column; margin-left: 20px; margin-right: 20px;
+  display: flex; flex:1; flex-direction: column; margin-left: 20px; margin-right: 20px; min-width: 300px; margin-bottom: 50px;
+}
+
+.benefitswb{
+  display: flex; flex:1; flex-direction: column; margin-left: 30px; margin-right: 30px; border-bottom: 0.597484px solid #7070703A;
+  min-height: 260px; margin-bottom: 70px; padding-bottom: 30px;
 }
 
 .input-group{
@@ -236,11 +320,11 @@ header{
 }
 
 .network{
-  display: flex; flex:1; flex-direction: column; margin-left: 12px; margin-right: 12px;
+  display: flex; flex:1; flex-direction: column; margin: 12px;
   background: #FFFFFF;
   box-shadow: 0px 15px 30px rgba(54, 61, 77, 0.03);
   border-radius: 10px;
-  max-width: 247px;
+  max-width: 247px; min-width: 247px;
   height: 160px;
   justify-content: center;
   align-items: center;
@@ -268,12 +352,34 @@ header{
     flex-direction: column;
     padding: 60px ;
   }
+  .banner{
+    padding: 60px ;
+  }
+  .banner{
+     flex-direction: column;
+    background-image: unset;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 0;
+  }
+  .banner > div{
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .billbaby{
     flex-direction: column;
   }
 
   .three-fifth, .two-fifth{
     width: 100%;
+  }
+  .three-fifth{
+    margin-right: 0;
+  }
+  .one-third{
+    width: 100%;
+    margin-left: 0;
   }
 
   .half{
@@ -342,6 +448,13 @@ header{
   .imagepro{
     padding-left: 0; padding-right: 0;
   }
+  .col-6 {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .benefitswb{
+    margin-left: 0; margin-right: 0;
+  }
   .container{
     padding: 40px
   }
@@ -351,14 +464,46 @@ header{
   .addbg{
     background-image: unset;
   }
+  .agencybg{
+    background-image: unset;
+  }
+  .agencycard{
+   padding: 30px; margin: 20px 0px; padding-bottom: 70px;
+  }
+  .aboutcard{
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0; padding: 50px 30px;
+   }
+  .faqcard{
+    padding:35px;
+  }
   .iconbg{
     background-image: unset;
   }
   .slider{
+    background-image: unset !important;
+  }
+  .slider3{
     background-image: unset;
+    padding-bottom: 70px;
+  }
+  .servimage{
+    display: none;
+  }
+  .banner{
+    background-image: unset;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 0;
+  }
+  .banner > div{
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
   }
   .slider-font{
-    font-size: 60px; line-height: 66px;
+    font-size: 50px; line-height: 66px;
   }
   .center{
     text-align: center;
