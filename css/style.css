@@ -222,6 +222,10 @@ header{
 }
 .container{
   padding: 60px 70px; 
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 .two-fifth{
   width: calc(2/5 * 100%);
